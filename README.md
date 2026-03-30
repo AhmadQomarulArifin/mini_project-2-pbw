@@ -11,14 +11,14 @@ MySQL menggunakan PHP. Project ini dikembangkan menggunakan PHP, MySQL, HTML, CS
 - Menampilkan data dari database ke halaman web.
 
 ### TEKNOLOGI YANG DIGUNAKAN
-- PHP
+1. PHP
 Digunakan untuk:
 - Menghubungkan website ke database (koneksi.php)
 - Mengambil data dari database menggunakan query SQL
 - Menampilkan data secara dinamis ke HTML menggunakan echo
 - Melakukan looping data (while) untuk skills, pengalaman, dan sertifikat
 
-- MySQL
+2. MySQL
 Digunakan sebagai database untuk menyimpan data:
 - Tabel profile
 - Tabel about
@@ -26,17 +26,17 @@ Digunakan sebagai database untuk menyimpan data:
 - Tabel experiences
 - Tabel certificates
 Query yang digunakan:
-SELECT untuk mengambil data
-INSERT INTO untuk menambahkan data
+- SELECT untuk mengambil data
+- INSERT INTO untuk menambahkan data
 
-- HTML
+3. HTML
 Digunakan untuk struktur halaman:
 - Navbar
 - Section Home
 - Section About Me
 - Section Certificates
   
-- CSS
+4. CSS
 Digunakan untuk styling tampilan:
 - Background gradient (.sec-home, .sec-about, .sec-certs)
 - Layout custom (CSS Grid)
@@ -44,13 +44,13 @@ Digunakan untuk styling tampilan:
 - Responsive design (media query)
 - Smooth scrolling
   
-- Bootstrap 5
+5. Bootstrap 5
 Digunakan untuk:
 - Navbar responsif (navbar, collapse)
 - Grid system (container, row, col)
 - Progress bar (skills)
 - Utility class (py-5, mb-3, dll)
-- 
+
 
 ### STRUKTUR PROJECT
 
@@ -63,24 +63,22 @@ Portofolio_Arul
 
 ── README.md
 
-└── assets
-    ├── profile.jpg
+── assets
+    ── profile.jpg
     
-    ├── cert-1.jpg
+    ── cert-1.jpg
     
-    ├── cert-2.jpg
+    ── cert-2.jpg
     
-    └── cert-3.jpg
+    ── cert-3.jpg
     
 ### KONSEP DINAMIS
 
 Website ini bersifat dinamis karena:
 - Data tidak ditulis langsung di HTML
 - Data diambil dari database menggunakan PHP
-- Menggunakan query:
-$profile = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM profile"));
-- Ditampilkan menggunakan:
-<?php echo $profile['name']; ?>
+- Menggunakan query: $profile = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM profile"));
+- Ditampilkan menggunakan: <?php echo $profile['name']; ?>
 
 ### PENJELASAN SETIAP SECTION / FITUR
 
@@ -88,7 +86,9 @@ $profile = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM profile"));
 Fitur:
 - Navigasi ke Home, About Me, dan Certificates,
 - Responsive (mobile support)
-Penjelasan: Menggunakan Bootstrap Navbar Data nama diambil dari 
+  
+Penjelasan:
+Menggunakan Bootstrap Navbar Data nama diambil dari 
 database: <?php echo $profile['name']; ?>. Navigasi menggunakan anchor: <a href="#home">Home</a> Scroll menuju section berdasarkan id
 
 <img width="1347" height="59" alt="image" src="https://github.com/user-attachments/assets/4c27efd6-7704-4063-96bf-00198d5e8cf3" />
@@ -100,9 +100,9 @@ Fitur:
 - Deskripsi singkat
 - Email & GitHub
 - Statistik (skills, pengalaman, sertifikat)
+- 
 Penjelasan:
-Data diambil dari tabel profile dan about Ditampilkan menggunakan PHP: <?php echo $profile['name']; ?> <?php echo $about['description']; ?>
-Statistik dihitung otomatis: $total_skills = mysqli_num_rows($skills); Akan berubah jika data di database bertambah.
+Data diambil dari tabel profile dan about Ditampilkan menggunakan PHP: <?php echo $profile['name']; ?> <?php echo $about['description']; ?>, Statistik dihitung otomatis: $total_skills = mysqli_num_rows($skills); Akan berubah jika data di database bertambah.
 
 <img width="1349" height="501" alt="image" src="https://github.com/user-attachments/assets/c6b65e72-c8b9-4771-a3c1-71b250b81416" />
 
@@ -111,6 +111,7 @@ Fitur:
 - Deskripsi diri
 - Skills (progress bar)
 - Pengalaman
+  
 Penjelasan:
 Deskripsi: <?php echo $about['description']; ?>
 - Skills (Dinamis)
@@ -131,6 +132,5 @@ Fitur:
 Penjelasan:
 <?php while($c = mysqli_fetch_assoc($certificates)) { ?>
 Data diambil dari tabel certificates
-Gambar diambil dari folder assets
-<img src="assets/<?php echo $c['image']; ?>">
+Gambar diambil dari folder assets <img src="assets/<?php echo $c['image']; ?>">
 <img width="1347" height="485" alt="image" src="https://github.com/user-attachments/assets/48cd0417-c7af-4e99-b5c8-d1d81dd9b399" />
