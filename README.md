@@ -55,6 +55,7 @@ Digunakan untuk:
 ### STRUKTUR PROJECT
 
 Portofolio_Arul
+
 ── index.php
 
 ── koneksi.php
@@ -64,6 +65,7 @@ Portofolio_Arul
 ── README.md
 
 ── assets
+
     ── profile.jpg
     
     ── cert-1.jpg
@@ -78,7 +80,7 @@ Website ini bersifat dinamis karena:
 - Data tidak ditulis langsung di HTML
 - Data diambil dari database menggunakan PHP
 - Menggunakan query: $profile = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM profile"));
-- Ditampilkan menggunakan: <?php echo $profile['name']; ?>
+- Ditampilkan menggunakan: (<?php echo $profile['name']; ?>)
 
 ### PENJELASAN SETIAP SECTION / FITUR
 
