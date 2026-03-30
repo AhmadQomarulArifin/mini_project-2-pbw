@@ -14,13 +14,12 @@ body{
   color:#0f172a;
 }
 
-/* NAVBAR */
+
 .nav-basic{
   background:linear-gradient(to bottom,var(--dark1),var(--dark2));
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-/* TYPO */
 .kicker{
   letter-spacing:.20rem;
   font-weight:800;
@@ -30,7 +29,7 @@ body{
 .sec-title{font-weight:900;letter-spacing:-0.5px}
 .sec-sub{color:#475569;max-width:650px;margin:0 auto}
 
-/* HOME */
+
 .sec-home{
   color:#fff;
   background:
@@ -66,7 +65,7 @@ body{
 .home-links a{color:#fff;font-weight:650;text-decoration:none}
 .home-links a:hover{opacity:.85}
 
-/* STATS BOX  */
+
 .home-stats{display:grid;gap:14px}
 .stat{
   background:rgba(255,255,255,.08);
@@ -78,12 +77,12 @@ body{
 .stat-num{font-size:1.6rem;font-weight:900;line-height:1}
 .stat-label{opacity:.85;font-weight:650}
 
-/* ABOUT */
+
 .sec-about{
   background:linear-gradient(to bottom,#eaf1ff,#f6fbff);
 }
 
-/* DESKRIPSI CENTER (FIX) */
+
 .about-desc-card{
   max-width:900px;
   margin:0 auto 22px;
@@ -99,7 +98,7 @@ body{
   color:#334155;
 }
 
-/* CARD ABOUT */
+
 .about-card{
   background:rgba(255,255,255,.75);
   border-radius:var(--radius);
@@ -107,7 +106,7 @@ body{
   box-shadow:0 10px 25px rgba(0,0,0,.05);
 }
 
-/* Skills */
+
 .prog{
   height:10px;
   border-radius:999px;
@@ -115,7 +114,7 @@ body{
 }
 .progress-bar{border-radius:999px}
 
-/* Experience */
+
 .exp-list{display:flex;flex-direction:column;gap:16px}
 .exp-item{display:flex;gap:12px;align-items:flex-start}
 .exp-dot{
@@ -124,7 +123,7 @@ body{
   margin-top:7px;
 }
 
-/* CERTIFICATES */
+
 .sec-certs{
   background:
     radial-gradient(circle at 20% 20%, rgba(37,99,235,.25), transparent 60%),
@@ -153,12 +152,21 @@ body{
 .cert-title{color:#fff;font-weight:800}
 .cert-sub{color:rgba(255,255,255,.7);font-size:.9rem}
 
-/* MODAL */
+
 .modal-dark{background:#0f172a;border-radius:var(--radius)}
 
-/* MOBILE */
+
 @media(max-width:576px){
   .blob{width:280px;height:330px}
   .cert-media{height:170px}
   .about-desc-card{padding:18px 16px}
+}
+
+.navbar {
+  position: relative;
+  z-index: 9999;
+}
+
+section {
+  scroll-margin-top: 80px;
 }
